@@ -1,17 +1,18 @@
 {
   "name": "typescratcherpractice",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "vite --open",
+    "dev": "vite",
+    "dev_open": "vite --open",
     "build": "vite build --config ./vite.config-build.js --emptyOutDir --base=/typeScratchCoder/"
   },
   "author": "amami-harhid",
   "license": "AGPL-3.0-only",
   "description": "",
   "dependencies": {
-    "@tscratch3/typescratcher": "^0.0.72"
+    "@tscratch3/typescratcher": "^0.0.79"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",

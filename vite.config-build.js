@@ -4,6 +4,7 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import { glob } from 'glob'
+//import topLevelAwait from 'vite-plugin-top-level-await';
 import pkg from './package.json';
 const name = JSON.stringify(pkg.name);
 
@@ -36,12 +37,19 @@ const outDir = resolve(__dirname, 'docs');
 export default defineConfig({
     build: {
         target: "esnext",
+        // lib:{
+        //     entry: resolve(__dirname, 'src/index.ts'),
+        //     formats: ["es"],
+        // },
         outDir, // ビルド結果を格納する先
         rollupOptions: {
             input : rollupOpsionsInput,
         },
     },
     esbuild: {
+        supported: {
+//            'top-level-await': true
+        },
         target: "esnext",
 
     },
@@ -52,7 +60,9 @@ export default defineConfig({
     },
     resolve: {
         alias: {
+            "@Type": resolve(__dirname, './node_modules/@tscratch3/typescratcher/Type'),
             "@Assets": resolve(__dirname, './assets'),
         }
     }
+    //root: resolve(__dirname, './src'),
 })
