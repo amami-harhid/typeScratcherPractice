@@ -7,16 +7,15 @@ import { Sprite } from "@tscratch3/typescratcher";
 import { AppleImage } from "./sub/images";
 
 // スプライトを作る
-const apple = new Ts.Sprite('sprite');
-apple.Costume.add( [AppleImage] );
+const apple = new Ts.Sprite("sprite");
+apple.Costume.add([AppleImage]);
 
-const _test = async function*(this:Sprite) {
-    
-    for(;;){
+const _test = async function* (this: Sprite) {
+    for (;;) {
         this.Motion.move.steps(5);
-        yield; 
+        yield;
     }
-}
+};
 apple.Event.flagPresser().func = _test;
 
 // 開始
