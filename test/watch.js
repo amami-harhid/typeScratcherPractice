@@ -9,12 +9,14 @@ async function watchAndRun() {
 
     // Viteの開発サーバーをミドルウェアモードで起動
     const vite = await createServer({
+        root: path.resolve('./test'), // tsconfig.jsonがある場所をViteのルートに指定
+        configFile: false, // ルート以外のvite.config.jsを誤認しないようにオフにする
         server: { middlewareMode: true },
         appType: 'custom',
     });
 
     async function execute() {
-        console.clear(); // 画面をクリア（お好みで）
+        console.clear(); // 画面をクリア
         console.log(`\n🚀 [Vite連動] 実行中: ${targetFile}\n------------------------`);
         try {
             // キャッシュをクリアしてモジュールを再読み込み（実質的なホットリロード）

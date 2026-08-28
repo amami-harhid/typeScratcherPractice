@@ -1,9 +1,15 @@
-const Word = 'いろはに';
+/**
+ * let宣言とカウントアップ 
+ */
 
-const test = { Word };
+/** カウンター */
+let counter = 0;
+for(;;) {
+    counter += 1;
+    if( counter > 20 ) {
+        break;
+    }
+    console.log(`counter=${counter}`);
+}
 
-//Word = 'さしすせそ'
-
-test.Word = 'かきくけこ'
-
-console.log(test, Word);
+export {}
