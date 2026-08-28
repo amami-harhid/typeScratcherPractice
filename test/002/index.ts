@@ -11,5 +11,3 @@ for(;;) {
     }
     console.log(`counter=${counter}`);
 }
-
-export {}

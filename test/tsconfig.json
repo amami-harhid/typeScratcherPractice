@@ -20,7 +20,7 @@
       /* Bundler mode */
       "allowImportingTsExtensions": true,
       //"verbatimModuleSyntax": true,
-      //"moduleDetection": "force",
+      "moduleDetection": "force",
       "noEmit": true,
   
       /* Linting */

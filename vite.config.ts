@@ -37,7 +37,7 @@ for (const entry of entries) {
     // 5. Viteには root からの相対パスを渡す(Windows対応)
     rollupOpsionsInput[key] = normalizedPath;
 }
-
+console.log(rollupOpsionsInput);
 export default defineConfig({
     root, // ルートは ./src
 
