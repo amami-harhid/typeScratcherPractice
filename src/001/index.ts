@@ -14,18 +14,17 @@ apple.Costume.add( AppleImage );
 // 位置決め（初期）
 apple.Motion.move.to( [ 0, 0 ] );
 
-//「apple」旗が押されたときのイベントスレッド
-const _test = async function* ( this : Sprite ) {
+//「apple」イベントスレッド
+const _test = function( this : Sprite ) {
     // 位置決め（初期）
     apple.Motion.move.to( [ 0, 0 ] );
     // ずっと繰り返す
     for ( ;; ) {
         // 5 進む
         this.Motion.move.steps( 5 );
-        // 次のフレームになるまで休止
-        yield;
     }
 };
+// 旗が押されたときのイベントスレッドを設定
 apple.Event.flagPresser().func = _test;
 
 // 開始

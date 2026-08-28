@@ -2,8 +2,8 @@
  * このファイルの内容を変更してはいけません。
  */
  {
-    "include": ["./src/**/*.ts", "./index.html", "./node_modules/@tscratch3/typescracher/src"],
-    "exclude": ["./node_modules/*", "./build/**/*", "./node_modules/@tscratch3/typescracher/src/type"],
+    "include": ["./src/**/*.ts" ],
+    "exclude": ["./node_modules/*" ],
     "compilerOptions": {
       "target": "esnext",
       //"useDefineForClassFields": true,
@@ -14,8 +14,7 @@
       "lib": ["esnext", "DOM", "DOM.Iterable"],
       "skipLibCheck": true,
       "paths": {
-        "@Type/*": ["./node_modules/@tscratch3/typescratcher/Type/*"],
-        "@Assets/*": ["./assets/*"]
+        "@Assets/*": ["/assets/*"]
       },
       "importHelpers": true,
       /* Bundler mode */
@@ -30,6 +29,7 @@
       //"noUnusedParameters": true,
       "noFallthroughCasesInSwitch": true,
       /* import package.json のために許可する */
-      "resolveJsonModule": true
+      "resolveJsonModule": true,
+      "sourceMap": true
     }
   }
