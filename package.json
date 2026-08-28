@@ -11,6 +11,8 @@
     "license": "AGPL-3.0-only",
     "description": "",
     "devDependencies": {
-        "@tscratch3/typescratcher": "^0.1.48"
+        "@tscratch3/typescratcher": "^0.1.48",
+        "cross-env": "^10.1.0",
+        "vite-plugin-node": "^8.0.0"
     }
 }
