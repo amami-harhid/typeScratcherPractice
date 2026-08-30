@@ -4,10 +4,10 @@
 
 /** カウンター */
 let counter = 0;
-for(;;) {
+for( ;; ) {
     counter += 1;
     if( counter > 20 ) {
         break;
     }
-    console.log(`counter=${counter}`);
+    console.log( `counter=${counter}` );
 }

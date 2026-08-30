@@ -3,15 +3,15 @@
  */
  {
     "include": ["./src/**/*.ts" ],
-    "exclude": ["./node_modules/*" ],
+    "exclude": ["./node_modules/*", "./test/**/*.ts" ],
     "compilerOptions": {
       "target": "esnext",
-      //"useDefineForClassFields": true,
       "module": "esnext",
       "moduleResolution": "node",
       "ignoreDeprecations": "6.0",
       "types": ["node"],
       "lib": ["esnext", "DOM", "DOM.Iterable"],
+
       "skipLibCheck": true,
       "paths": {
         "@Assets/*": ["/assets/*"]
@@ -19,15 +19,13 @@
       "importHelpers": true,
       /* Bundler mode */
       "allowImportingTsExtensions": true,
-      //"verbatimModuleSyntax": true,
-      //"moduleDetection": "force",
       "noEmit": true,
   
       /* Linting */
       "strict": true,
       "noUnusedLocals": true,
-      //"noUnusedParameters": true,
       "noFallthroughCasesInSwitch": true,
+
       /* import package.json のために許可する */
       "resolveJsonModule": true,
       "sourceMap": true
