@@ -4,14 +4,13 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "dev": "vite",
+        "dev": "vite --open",
         "build": "vite build --emptyOutDir --base=/typeScratchPractice/"
     },
     "author": "amami-harhid",
     "license": "AGPL-3.0-only",
     "description": "",
     "devDependencies": {
-        "@tscratch3/typescratcher": "^0.1.48",
-        "vite-plugin-node": "^8.0.0"
+        "@tscratch3/typescratcher": "^0.1.48"
     }
 }

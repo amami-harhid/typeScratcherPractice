@@ -16,7 +16,11 @@
       "importHelpers": true,
       /* Bundler mode */
       "allowImportingTsExtensions": true,
-      "moduleDetection": "force",
+      
+      /*すべての.tsファイルを強制的にモジュール（独立したスコープを持つファイル）として扱うための設定*/
+      "moduleDetection": "force", 
+
+      /*TypeScriptのコンパイル時にJavaScriptファイルや型定義ファイルなどの成果物を出力（生成）しない*/
       "noEmit": true,
   
       /* Linting */
